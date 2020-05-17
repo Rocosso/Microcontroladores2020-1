@@ -91,28 +91,6 @@ F 3 "" H 1850 2300 50  0001 C CNN
 	1    1850 2300
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5EA5C293
-P 1850 1050
-F 0 "#PWR?" H 1850 900 50  0001 C CNN
-F 1 "VCC" H 1867 1223 50  0000 C CNN
-F 2 "" H 1850 1050 50  0001 C CNN
-F 3 "" H 1850 1050 50  0001 C CNN
-	1    1850 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 5EA5C920
-P 1200 2000
-F 0 "#PWR?" H 1200 1850 50  0001 C CNN
-F 1 "VCC" H 1217 2173 50  0000 C CNN
-F 2 "" H 1200 2000 50  0001 C CNN
-F 3 "" H 1200 2000 50  0001 C CNN
-	1    1200 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3150 1500 3150 1550
 Wire Wire Line
@@ -132,8 +110,6 @@ Connection ~ 3150 1950
 Wire Wire Line
 	3150 1950 3150 2000
 Wire Wire Line
-	800  1750 1350 1750
-Wire Wire Line
 	800  2050 800  2200
 Wire Wire Line
 	1350 1950 1350 2050
@@ -147,34 +123,12 @@ Wire Wire Line
 	3400 800  3400 1950
 Wire Wire Line
 	1350 800  3400 800 
-$Comp
-L power:VCC #PWR?
-U 1 1 5EA68E96
-P 3150 1100
-F 0 "#PWR?" H 3150 950 50  0001 C CNN
-F 1 "VCC" H 3167 1273 50  0000 C CNN
-F 2 "" H 3150 1100 50  0001 C CNN
-F 3 "" H 3150 1100 50  0001 C CNN
-	1    3150 1100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3150 1100 3150 1200
 Wire Wire Line
 	1850 2150 1850 2300
 Wire Wire Line
 	4550 1000 4200 1000
-$Comp
-L power:+5V #PWR?
-U 1 1 5EB36E31
-P 4200 1000
-F 0 "#PWR?" H 4200 850 50  0001 C CNN
-F 1 "+5V" H 4215 1173 50  0000 C CNN
-F 2 "" H 4200 1000 50  0001 C CNN
-F 3 "" H 4200 1000 50  0001 C CNN
-	1    4200 1000
-	1    0    0    -1  
-$EndComp
 $Comp
 L pspice:0 #GND?
 U 1 1 5EB37A17
@@ -285,14 +239,60 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 1850 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 5EB49A53
+L power:+3.3V #PWR?
+U 1 1 5EC09E83
+P 4200 1000
+F 0 "#PWR?" H 4200 850 50  0001 C CNN
+F 1 "+3.3V" H 4215 1173 50  0000 C CNN
+F 2 "" H 4200 1000 50  0001 C CNN
+F 3 "" H 4200 1000 50  0001 C CNN
+	1    4200 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC0A9BE
 P 6350 1300
 F 0 "#PWR?" H 6350 1150 50  0001 C CNN
-F 1 "+5V" H 6365 1473 50  0000 C CNN
+F 1 "+3.3V" H 6365 1473 50  0000 C CNN
 F 2 "" H 6350 1300 50  0001 C CNN
 F 3 "" H 6350 1300 50  0001 C CNN
 	1    6350 1300
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC0DF4A
+P 3150 1100
+F 0 "#PWR?" H 3150 950 50  0001 C CNN
+F 1 "+3.3V" H 3165 1273 50  0000 C CNN
+F 2 "" H 3150 1100 50  0001 C CNN
+F 3 "" H 3150 1100 50  0001 C CNN
+	1    3150 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC0E7E2
+P 1850 1050
+F 0 "#PWR?" H 1850 900 50  0001 C CNN
+F 1 "+3.3V" H 1865 1223 50  0000 C CNN
+F 2 "" H 1850 1050 50  0001 C CNN
+F 3 "" H 1850 1050 50  0001 C CNN
+	1    1850 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC0EFC0
+P 1200 2000
+F 0 "#PWR?" H 1200 1850 50  0001 C CNN
+F 1 "+3.3V" H 1215 2173 50  0000 C CNN
+F 2 "" H 1200 2000 50  0001 C CNN
+F 3 "" H 1200 2000 50  0001 C CNN
+	1    1200 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1750 800  1750
 $EndSCHEMATC
