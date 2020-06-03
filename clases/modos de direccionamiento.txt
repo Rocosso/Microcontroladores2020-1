@@ -1,0 +1,56 @@
+modos de direccionamiento
+no es muy claro el tema de la variable usada y por que esta ubicada en la memoria de acceso directo
+
+inherente carga una unica orden sin operandos, regularmente con los registros de la CPU y es la mas rapidamente ejecutada, como decx o psha,RTs, inca, pulh
+
+
+inmediato, usa operandos constante, cargar numeros en registros o cosas asi, son de rapida ejecucion ej
+          lda #12t
+	  LDX #%10110100
+	  and #%10101010
+
+directo: es acceder a cualquier instuccion de la memoria de acceso directo de la ram
+ej:	bset 0, PTADD
+	inc AUX2 siempre que la variable aux2 este en la memoria extendida
+	
+extendido: es acceder a cualquier espacio de memoria de la maemoria extendida ej
+ 	lda SOPT1 #Sopt1 esta en 0x1802 como es fuperior a 0x00ff esta ubicado en la memoria extendida
+	JMP retardo
+
+relativo: es usado por instrucciones de salto como Branch
+	BRA menu
+	BSR retardo
+	BRSET 0, PTADD, PRENDER
+indexado:
+	es para acceder a toda la memoria de microcontrolador usando un registro de 16 its, por defecto trae el registro X:H
+	asi que se emplea este para poder desplazarse por la memoria haciendo esto:
+
+		LDA ,x
+		AUX1 ds.b 1
+	menu:
+		ldx #aux1
+		lda #20T
+		STA ,x
+indexado con postincremento:
+	lo mismo que el indexado pero, luego de ser empleado automaticamente se mueve a a apuntar a la siguiente posicion de la memoria
+directo a indexado con posincremento
+	solo lo usa la instruccion mov y lo que hace es usar una variable o un registro y y el registro X:H, para copiarlo el espacio de
+	memoria de la varaible debe estar en el espacio de la memoria directo, luego de hacer la operacion el apuntador se mueve a la
+	siguiente posicion de memoria y se usa para llenar tablas, ej:
+		MOV PTBD,x+
+
+linea 9 no debe iniciar con numero la declaracion de la variable
+linea 14 configura el COPT perro, guardian, pero nunca lo alimenta, entonces el contador se va a desbordar
+linea 15, usa dos posiciones reservadas del registro, no es configurable
+linea 17, activa interrupciones pero nunca las emplea
+linea 18, la etiqueta debe tener un nombre de una sola palabra, sin espacios
+linea 20, deberia usarse MOV #200t,PTBD
+linea 21, sobra el #
+linea 22, Conmuta no existe, existe conmuta
+linea 23, ni idea con que esta  cargado el acumulador, ni idea que pone en el puerto aunque la sintaxis esta bien
+linea 26, nunca va a encontrar esa subrutina por el problema de la linea 18
+linea 28, esta cargando el acumulador con el registro x sin saber que hay en el registro
+linea 29, desplaza la posicion en la memoria sin saber a donde la desplaza
+linea 30, almacena en X el valor del acumulador, sin conocerlo
+linea 33, desde el comienzo en la linea 16 esta argado el pin 5 del puerto con un valor alto, nunca en el codio esto cambia y en esta linea lo reconfigura cada nada
+linea 35 en adelante, nunca se van a ejecutar porque en la linea 34 RTS retorna de la subrutina
