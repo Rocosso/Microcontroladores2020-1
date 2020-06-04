@@ -1,0 +1,140 @@
+
+PROGRAM "Z:\Repositorio\LAB_2\bin\Project.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.37 Build 9279, Oct  7 2009
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main.asm.o                              Model: SMALL,         Lang: Assembler
+MCUinit.asm.o                           Model: SMALL,         Lang: Assembler
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE000 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+.init                             87     R     0xE000     0xE056   ROM
+MY_ZEROPAGE                        3   R/W       0x60       0x62   Z_RAM
+MCUinit.asm__ORG00001              2     R     0xFFFE     0xFFFF   .absSeg0
+CODE_SECT                          1     R     0xE057     0xE057   ROM
+.stack                            64   R/W      0x100      0x13F   RAM
+
+Summary of section sizes per section type:
+READ_ONLY (R):          5A (dec:       90)
+READ_WRITE (R/W):       43 (dec:       67)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main.asm.o --
+- PROCEDURES:
+     _Startup                                  E000      15      21       1   .init       
+     main                                      E000       0       0       0   .init       
+     mainLoop                                  E015      21      33       0   .init       
+     auxretardo1                               E036       A      10       0   .init       
+     retardo1                                  E036       0       0       0   .init       
+     retardo2                                  E040      17      23       0   .init       
+- VARIABLES:
+     aux1                                        60       1       1       4   MY_ZEROPAGE 
+     aux2                                        61       1       1       4   MY_ZEROPAGE 
+     aux3                                        62       1       1       1   MY_ZEROPAGE 
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+MODULE:                 -- MCUinit.asm.o --
+- PROCEDURES:
+     MCU_init                                  E057       1       1       1   CODE_SECT   
+- VARIABLES:
+     VAR00001                                  FFFE       2       2       0   .text       
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main.asm.o                                   3     87      0
+  MCUinit.asm.o                                0      1      2
+  other                                       64      0      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  VAR00001 
+SECTION: ".init"
+  main _Startup mainLoop retardo1 auxretardo1 retardo2 
+SECTION: "MY_ZEROPAGE"
+  aux1 aux2 aux3 
+SECTION: "CODE_SECT"
+  MCU_init 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     aux1                                        60       1       1       4   MY_ZEROPAGE 
+     aux2                                        61       1       1       4   MY_ZEROPAGE 
+     aux3                                        62       1       1       1   MY_ZEROPAGE 
+     main                                      E000       0       0       0   .init       
+     _Startup                                  E000      15      21       1   .init       
+     mainLoop                                  E015      21      33       0   .init       
+     retardo1                                  E036       0       0       0   .init       
+     auxretardo1                               E036       A      10       0   .init       
+     retardo2                                  E040      17      23       0   .init       
+     MCU_init                                  E057       1       1       1   CODE_SECT   
+     VAR00001                                  FFFE       2       2       0   .text       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+_Startup                  USES __SEG_END_SSTACK MCU_init 
+auxretardo1               USES aux1 aux2 aux3 
+retardo2                  USES aux1 aux2 
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+    | 
+    +- MCU_init            
+         
+ _ORG00001           
+ | 
+ +- _Startup             (see above)
+    
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 90
+
