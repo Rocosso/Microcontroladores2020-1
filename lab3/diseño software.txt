@@ -1,0 +1,34 @@
+en el diseño se software se plantea un ciclo continuo en la etiqueta main, 
+donde el micro este encargado unicamente de realizar el conteo de
+cada segundo, el cual debe ser finalizado por una interrupcion por software 
+y enviarlo a cada grupo de pines que controlan la visualizacion
+en el puerto B y una vez transcurrido el segundo de la duracion del numero encendido, 
+se procede a encender o apagar el pin PTA4, donde esta el led a modo de CPU.
+
+
+para la realizacion del ciclo de conteo se busca realizar un retardo de 1 segundo, al finalizar 
+este se acumula en una variable auxiliar el valor de 
+la cantidad de retardos que han existido y cada 10 de ellos activar una decena mas, al completar 
+las 6 decenas se reinicia la cuenta invocando por sofware la interrupcion del pulsador 4
+
+para los 4 requerimientos de interrupcion por teclado, se plantea en los pines del PTA0 al PTA3
+activar los registros de KBI de cada uno de estos pines y emplearlos para llamar las 4 subrrutinas
+de interrupcion que se solicitan, las cuales son:
+
+en el interruptor 1, se realizo una logica de identificacion de pulsador presionado y al detectar ser
+ presionado salta a una subrutina de interrupcion donde se emula un ciclo while(1), y al interior de este
+se encuentre la emulacion en assembler de una estructura IF, la cual al ser presionado de nuevo el
+ interruptor 1, finaliza la interrupcion continuando donde habia quedado previo a ser activada
+
+esto se logra verificando la bandera de interrupcion una vez la primera interrupcion es atendida, 
+y la primera vez ha sido borrada la bandera de interrupcion
+si esta bandera se vuelve a activar, debe salirse de la interrupcion y asi dar por finalizada,
+la interrupcion, claro, no sin antes limpiar la bandera que se activo con la segunda interrupcion
+
+
+ en el interruptor 2, incrementar el contador
+en 1 y proseguir con el conteo.
+
+en el interruptor 3, incrementar el contador en 10 y proseguir con el conteo
+
+y en el interruptor 4, colocar el contador en 1 y proseguir con el conteo

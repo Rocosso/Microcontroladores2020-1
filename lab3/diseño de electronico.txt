@@ -1,0 +1,11 @@
+
+
+el decodificador 74lm47 se encarga de conveertir un valor expresado en binario a traves del los pines A, B,C,D en una señal
+en cada uno de los pines de la 'a' a la 'g', que facilmente se puede visualizar en un display 7 segmentos.
+
+
+los pines del PTB0 al PTB3 envian la señal del numero en binario al display que se encarga de contar las unidades, asi mismo los pines del PTB4 al PTB7
+se encargan de transmitir las decenas al segundo display, mientras que los pines del PTA0 al PTA3 se encargan de recibir las 4 interrupciones por 
+teclado KBI, de esta forma se emplea todo el puerto B en visualizacion y el puerto A en captura de datos.
+
+demas se usa el pin PTA4 como led CPU
