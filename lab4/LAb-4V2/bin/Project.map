@@ -1,0 +1,373 @@
+
+PROGRAM "C:\Documents and Settings\Admin\My Documents\LAb-4V2\bin\Project.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC08
+Memory Model: SMALL
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.37 Build 9279, Oct  7 2009
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+main.asm.o                              Model: SMALL,         Lang: Assembler
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xE000 (_Startup)
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+.init                            759     R     0xE000     0xE2F6   ROM
+MY_ZEROPAGE                       15   R/W       0x60       0x6E   Z_RAM
+CONSTANTES                       232     R     0xE2F7     0xE3DE   ROM
+.stack                            64   R/W      0x100      0x13F   RAM
+.vectSeg0_vect                     2     R     0xFFFE     0xFFFF   .vectSeg0
+
+Summary of section sizes per section type:
+READ_ONLY (R):         3E1 (dec:      993)
+READ_WRITE (R/W):       4F (dec:       79)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFFE        0xE000   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- main.asm.o --
+- PROCEDURES:
+     _Startup                                  E000      34      52       0   .init       
+     main                                      E000       0       0       0   .init       
+     mainLoop                                  E034       8       8      10   .init       
+     Calculadora                               E03C       F      15       0   .init       
+     Retroceso                                 E04B       6       6       0   .init       
+     Retroceso_Aux                             E051       A      10       0   .init       
+     Operando                                  E05B      12      18       0   .init       
+     Operando_1                                E06D       3       3       0   .init       
+     Operando_1_Aux                            E070       D      13       0   .init       
+     Operando_2                                E07D       3       3       0   .init       
+     Operando_2_Aux                            E080       D      13       0   .init       
+     Err_Operando                              E08D       8       8       1   .init       
+     Err_Operando_Aux                          E095      12      18       0   .init       
+     Operacion                                 E0A7      13      19       0   .init       
+     Carga_operacion                           E0BA       3       3       0   .init       
+     Operacion_Aux                             E0BD       B      11       0   .init       
+     Realiza_operacion                         E0C8      12      18       0   .init       
+     Busca_operacion                           E0DA      1B      27       0   .init       
+     Opera_Division_Aux                        E0F5       3       3       0   .init       
+     Opera_Suma                                E0F8       E      14       0   .init       
+     Suma_Aux                                  E106       7       7       0   .init       
+     Suma_Aux1                                 E10D       9       9       0   .init       
+     Suma_Aux2                                 E116       9       9       0   .init       
+     Opera_Resta                               E11F       8       8       0   .init       
+     Resta_Aux                                 E127       9       9       0   .init       
+     Resta_Aux1                                E130       9       9       0   .init       
+     Resta_Negativa                            E139       6       6       0   .init       
+     Resta_Aux2                                E139       0       0       0   .init       
+     Resta_Aux3                                E13F      11      17       0   .init       
+     Resta_Aux4                                E150       9       9       0   .init       
+     Opera_Multiplicacion                      E159       F      15       0   .init       
+     Multiplicacion_Aux                        E168       7       7       0   .init       
+     Multiplicacion_Aux1                       E16F       9       9       0   .init       
+     Multiplicacion_Aux2                       E178       9       9       0   .init       
+     Opera_Division                            E181       D      13       1   .init       
+     Division_Aux                              E18E       9       9       0   .init       
+     Division_Aux2                             E197       9       9       0   .init       
+     Division_cero                             E1A0       9       9       0   .init       
+     Err_Operacion                             E1A9       8       8       1   .init       
+     Err_Operacion_Aux                         E1B1      12      18       0   .init       
+     Err_Simultaneo                            E1C3       8       8       1   .init       
+     Err_Simultaneo_Aux                        E1CB      12      18       0   .init       
+     Err_Negativo                              E1DD       8       8       1   .init       
+     Err_Negativo_Aux                          E1E5      12      18       0   .init       
+     Err_Cero                                  E1F7       8       8       1   .init       
+     Err_Cero_Aux                              E1FF      12      18       0   .init       
+     transmit                                  E211       4       4       5   .init       
+     transmit_Ret                              E215       6       6       5   .init       
+     Config_KBI                                E21B      1D      29       1   .init       
+     Config_SER                                E238       9       9       1   .init       
+     KBI_INT                                   E241      11      17       0   .init       
+     Antirebote                                E252       3       3       1   .init       
+     rt2                                       E255       6       6       0   .init       
+     LeerTeclado                               E25B      49      73       1   .init       
+     SalidaLeerTeclado                         E2A4       1       1       0   .init       
+     Tecla1                                    E2A5       4       4       0   .init       
+     Tecla2                                    E2A9       4       4       0   .init       
+     Tecla3                                    E2AD       4       4       0   .init       
+     Tecla4                                    E2B1       7       7       0   .init       
+     Tecla5                                    E2B8       4       4       0   .init       
+     Tecla6                                    E2BC       4       4       0   .init       
+     Tecla7                                    E2C0       4       4       0   .init       
+     Tecla8                                    E2C4       7       7       0   .init       
+     Tecla9                                    E2CB       4       4       0   .init       
+     Tecla10                                   E2CF       4       4       0   .init       
+     Tecla11                                   E2D3       4       4       0   .init       
+     Tecla12                                   E2D7       7       7       0   .init       
+     Tecla13                                   E2DE       7       7       0   .init       
+     Tecla14                                   E2E5       4       4       0   .init       
+     Tecla15                                   E2E9       7       7       0   .init       
+     Tecla16                                   E2F0       7       7       0   .init       
+- VARIABLES:
+     Baud_Serial                                 60       1       1       2   MY_ZEROPAGE 
+     Data_TX                                     61       1       1      17   MY_ZEROPAGE 
+     Long_Serial                                 62       1       1      10   MY_ZEROPAGE 
+     Tecla                                       63       1       1       9   MY_ZEROPAGE 
+     Retardo                                     64       1       1       2   MY_ZEROPAGE 
+     Estado                                      65       1       1      14   MY_ZEROPAGE 
+     Espera                                      66       1       1       1   MY_ZEROPAGE 
+     Numero                                      67       1       1      13   MY_ZEROPAGE 
+     Operando1                                   68       1       1       7   MY_ZEROPAGE 
+     Operador                                    69       1       1       4   MY_ZEROPAGE 
+     Operando2                                   6A       1       1       8   MY_ZEROPAGE 
+     Resultado                                   6B       1       1      11   MY_ZEROPAGE 
+     Remainder                                   6C       2       2       4   MY_ZEROPAGE 
+     Verificacion                                6E       1       1      11   MY_ZEROPAGE 
+     Mensaje1                                  E2F7      16      22       0   CONSTANTES  
+     Mensaje2                                  E30D       E      14       0   CONSTANTES  
+     Mensaje3                                  E31B      15      21       0   CONSTANTES  
+     Mensaje4                                  E330      2B      43       2   CONSTANTES  
+     Mensaje5                                  E35B      2B      43       2   CONSTANTES  
+     Mensaje6                                  E386      30      48       2   CONSTANTES  
+     Mensaje7                                  E3B6      15      21       2   CONSTANTES  
+     Mensaje8                                  E3CB      14      20       2   CONSTANTES  
+- LABELS:
+     __SEG_END_SSTACK                           140       0       0       1               
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  main.asm.o                                  15    759    232
+  other                                       64      2      0
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".init"
+  main _Startup mainLoop Calculadora Retroceso Retroceso_Aux Operando 
+  Operando_1 Operando_1_Aux Operando_2 Operando_2_Aux Err_Operando 
+  Err_Operando_Aux Operacion Carga_operacion Operacion_Aux Realiza_operacion 
+  Busca_operacion Opera_Division_Aux Opera_Suma Suma_Aux Suma_Aux1 Suma_Aux2 
+  Opera_Resta Resta_Aux Resta_Aux1 Resta_Aux2 Resta_Negativa Resta_Aux3 
+  Resta_Aux4 Opera_Multiplicacion Multiplicacion_Aux Multiplicacion_Aux1 
+  Multiplicacion_Aux2 Opera_Division Division_Aux Division_Aux2 Division_cero 
+  Err_Operacion Err_Operacion_Aux Err_Simultaneo Err_Simultaneo_Aux 
+  Err_Negativo Err_Negativo_Aux Err_Cero Err_Cero_Aux transmit transmit_Ret 
+  Config_KBI Config_SER KBI_INT Antirebote rt2 LeerTeclado SalidaLeerTeclado 
+  Tecla1 Tecla2 Tecla3 Tecla4 Tecla5 Tecla6 Tecla7 Tecla8 Tecla9 Tecla10 
+  Tecla11 Tecla12 Tecla13 Tecla14 Tecla15 Tecla16 
+SECTION: "MY_ZEROPAGE"
+  Baud_Serial Data_TX Long_Serial Tecla Retardo Estado Espera Numero Operando1 
+  Operador Operando2 Resultado Remainder Verificacion 
+SECTION: "CONSTANTES"
+  Mensaje1 Mensaje2 Mensaje3 Mensaje4 Mensaje5 Mensaje6 Mensaje7 Mensaje8 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     Baud_Serial                                 60       1       1       2   MY_ZEROPAGE 
+     Data_TX                                     61       1       1      17   MY_ZEROPAGE 
+     Long_Serial                                 62       1       1      10   MY_ZEROPAGE 
+     Tecla                                       63       1       1       9   MY_ZEROPAGE 
+     Retardo                                     64       1       1       2   MY_ZEROPAGE 
+     Estado                                      65       1       1      14   MY_ZEROPAGE 
+     Espera                                      66       1       1       1   MY_ZEROPAGE 
+     Numero                                      67       1       1      13   MY_ZEROPAGE 
+     Operando1                                   68       1       1       7   MY_ZEROPAGE 
+     Operador                                    69       1       1       4   MY_ZEROPAGE 
+     Operando2                                   6A       1       1       8   MY_ZEROPAGE 
+     Resultado                                   6B       1       1      11   MY_ZEROPAGE 
+     Remainder                                   6C       2       2       4   MY_ZEROPAGE 
+     Verificacion                                6E       1       1      11   MY_ZEROPAGE 
+     main                                      E000       0       0       0   .init       
+     _Startup                                  E000      34      52       0   .init       
+     mainLoop                                  E034       8       8      10   .init       
+     Calculadora                               E03C       F      15       0   .init       
+     Retroceso                                 E04B       6       6       0   .init       
+     Retroceso_Aux                             E051       A      10       0   .init       
+     Operando                                  E05B      12      18       0   .init       
+     Operando_1                                E06D       3       3       0   .init       
+     Operando_1_Aux                            E070       D      13       0   .init       
+     Operando_2                                E07D       3       3       0   .init       
+     Operando_2_Aux                            E080       D      13       0   .init       
+     Err_Operando                              E08D       8       8       1   .init       
+     Err_Operando_Aux                          E095      12      18       0   .init       
+     Operacion                                 E0A7      13      19       0   .init       
+     Carga_operacion                           E0BA       3       3       0   .init       
+     Operacion_Aux                             E0BD       B      11       0   .init       
+     Realiza_operacion                         E0C8      12      18       0   .init       
+     Busca_operacion                           E0DA      1B      27       0   .init       
+     Opera_Division_Aux                        E0F5       3       3       0   .init       
+     Opera_Suma                                E0F8       E      14       0   .init       
+     Suma_Aux                                  E106       7       7       0   .init       
+     Suma_Aux1                                 E10D       9       9       0   .init       
+     Suma_Aux2                                 E116       9       9       0   .init       
+     Opera_Resta                               E11F       8       8       0   .init       
+     Resta_Aux                                 E127       9       9       0   .init       
+     Resta_Aux1                                E130       9       9       0   .init       
+     Resta_Aux2                                E139       0       0       0   .init       
+     Resta_Negativa                            E139       6       6       0   .init       
+     Resta_Aux3                                E13F      11      17       0   .init       
+     Resta_Aux4                                E150       9       9       0   .init       
+     Opera_Multiplicacion                      E159       F      15       0   .init       
+     Multiplicacion_Aux                        E168       7       7       0   .init       
+     Multiplicacion_Aux1                       E16F       9       9       0   .init       
+     Multiplicacion_Aux2                       E178       9       9       0   .init       
+     Opera_Division                            E181       D      13       1   .init       
+     Division_Aux                              E18E       9       9       0   .init       
+     Division_Aux2                             E197       9       9       0   .init       
+     Division_cero                             E1A0       9       9       0   .init       
+     Err_Operacion                             E1A9       8       8       1   .init       
+     Err_Operacion_Aux                         E1B1      12      18       0   .init       
+     Err_Simultaneo                            E1C3       8       8       1   .init       
+     Err_Simultaneo_Aux                        E1CB      12      18       0   .init       
+     Err_Negativo                              E1DD       8       8       1   .init       
+     Err_Negativo_Aux                          E1E5      12      18       0   .init       
+     Err_Cero                                  E1F7       8       8       1   .init       
+     Err_Cero_Aux                              E1FF      12      18       0   .init       
+     transmit                                  E211       4       4       5   .init       
+     transmit_Ret                              E215       6       6       5   .init       
+     Config_KBI                                E21B      1D      29       1   .init       
+     Config_SER                                E238       9       9       1   .init       
+     KBI_INT                                   E241      11      17       0   .init       
+     Antirebote                                E252       3       3       1   .init       
+     rt2                                       E255       6       6       0   .init       
+     LeerTeclado                               E25B      49      73       1   .init       
+     SalidaLeerTeclado                         E2A4       1       1       0   .init       
+     Tecla1                                    E2A5       4       4       0   .init       
+     Tecla2                                    E2A9       4       4       0   .init       
+     Tecla3                                    E2AD       4       4       0   .init       
+     Tecla4                                    E2B1       7       7       0   .init       
+     Tecla5                                    E2B8       4       4       0   .init       
+     Tecla6                                    E2BC       4       4       0   .init       
+     Tecla7                                    E2C0       4       4       0   .init       
+     Tecla8                                    E2C4       7       7       0   .init       
+     Tecla9                                    E2CB       4       4       0   .init       
+     Tecla10                                   E2CF       4       4       0   .init       
+     Tecla11                                   E2D3       4       4       0   .init       
+     Tecla12                                   E2D7       7       7       0   .init       
+     Tecla13                                   E2DE       7       7       0   .init       
+     Tecla14                                   E2E5       4       4       0   .init       
+     Tecla15                                   E2E9       7       7       0   .init       
+     Tecla16                                   E2F0       7       7       0   .init       
+     Mensaje1                                  E2F7      16      22       0   CONSTANTES  
+     Mensaje2                                  E30D       E      14       0   CONSTANTES  
+     Mensaje3                                  E31B      15      21       0   CONSTANTES  
+     Mensaje4                                  E330      2B      43       2   CONSTANTES  
+     Mensaje5                                  E35B      2B      43       2   CONSTANTES  
+     Mensaje6                                  E386      30      48       2   CONSTANTES  
+     Mensaje7                                  E3B6      15      21       2   CONSTANTES  
+     Mensaje8                                  E3CB      14      20       2   CONSTANTES  
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+_Startup                  USES __SEG_END_SSTACK Data_TX Baud_Serial Tecla 
+                                Espera Numero Operando1 Operador Operando2 Resultado 
+                                Verificacion Retardo Estado Config_SER Config_KBI 
+mainLoop                  USES Verificacion 
+Calculadora               USES Verificacion 
+Retroceso                 USES Estado 
+Retroceso_Aux             USES Estado 
+Operando                  USES Estado Err_Operando 
+Operando_1                USES Numero Operando1 
+Operando_1_Aux            USES Operando1 Estado 
+Operando_2                USES Numero Operando2 
+Operando_2_Aux            USES Operando2 Estado 
+Err_Operando              USES Mensaje4 Long_Serial Data_TX 
+Err_Operando_Aux          USES Data_TX transmit Mensaje4 transmit_Ret 
+                                Long_Serial 
+Operacion                 USES Estado Err_Operacion mainLoop 
+Carga_operacion           USES Tecla Operador 
+Operacion_Aux             USES Operador Estado mainLoop 
+Realiza_operacion         USES Estado Tecla Err_Simultaneo mainLoop 
+Busca_operacion           USES Operador mainLoop 
+Opera_Division_Aux        USES Opera_Division 
+Opera_Suma                USES Operando1 Operando2 Resultado Remainder 
+Suma_Aux1                 USES Remainder 
+Suma_Aux2                 USES mainLoop 
+Opera_Resta               USES Operando1 Operando2 Resultado 
+Resta_Aux                 USES Resultado 
+Resta_Aux1                USES mainLoop 
+Resta_Aux3                USES Resultado Estado Err_Negativo 
+Resta_Aux4                USES mainLoop 
+Opera_Multiplicacion      USES Operando1 Operando2 Resultado Remainder 
+Multiplicacion_Aux1       USES Remainder 
+Multiplicacion_Aux2       USES mainLoop 
+Opera_Division            USES Operando2 Operando1 Resultado 
+Division_Aux              USES Resultado 
+Division_Aux2             USES mainLoop 
+Division_cero             USES Estado Err_Cero mainLoop 
+Err_Operacion             USES Mensaje5 Long_Serial Data_TX 
+Err_Operacion_Aux         USES Data_TX transmit Mensaje5 transmit_Ret 
+                                Long_Serial 
+Err_Simultaneo            USES Mensaje6 Long_Serial Data_TX 
+Err_Simultaneo_Aux        USES Data_TX transmit Mensaje6 transmit_Ret 
+                                Long_Serial 
+Err_Negativo              USES Mensaje7 Long_Serial Data_TX 
+Err_Negativo_Aux          USES Data_TX transmit Mensaje7 transmit_Ret 
+                                Long_Serial 
+Err_Cero                  USES Mensaje8 Long_Serial Data_TX 
+Err_Cero_Aux              USES Data_TX transmit Mensaje8 transmit_Ret 
+                                Long_Serial 
+transmit                  USES Data_TX 
+Config_SER                USES Baud_Serial 
+KBI_INT                   USES Retardo Antirebote LeerTeclado 
+LeerTeclado               USES Verificacion 
+Tecla1                    USES Numero 
+Tecla2                    USES Numero 
+Tecla3                    USES Numero 
+Tecla4                    USES Tecla Verificacion 
+Tecla5                    USES Numero 
+Tecla6                    USES Numero 
+Tecla7                    USES Numero 
+Tecla8                    USES Tecla Verificacion 
+Tecla9                    USES Numero 
+Tecla10                   USES Numero 
+Tecla11                   USES Numero 
+Tecla12                   USES Tecla Verificacion 
+Tecla13                   USES Tecla Verificacion 
+Tecla14                   USES Numero 
+Tecla15                   USES Tecla Verificacion 
+Tecla16                   USES Tecla Verificacion 
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |    
+ +- _Startup            
+    | 
+    +- Config_SER          
+    |    
+    +- Config_KBI          
+         
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 3
+Total size of all blocks to be downloaded: 993
+
