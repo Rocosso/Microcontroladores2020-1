@@ -1,5 +1,5 @@
 
-PROGRAM "C:\Documents and Settings\Admin\My Documents\LAb-4V2\bin\Project.abs"
+PROGRAM "Z:\lab4\LAb-4V2\bin\Project.abs"
 
 *********************************************************************************************
 TARGET SECTION
@@ -23,14 +23,14 @@ Entry point: 0xE000 (_Startup)
 SECTION-ALLOCATION SECTION
 Section Name                    Size  Type     From       To       Segment
 ---------------------------------------------------------------------------------------------
-.init                            759     R     0xE000     0xE2F6   ROM
+.init                            773     R     0xE000     0xE304   ROM
 MY_ZEROPAGE                       15   R/W       0x60       0x6E   Z_RAM
-CONSTANTES                       232     R     0xE2F7     0xE3DE   ROM
+CONSTANTES                       232     R     0xE305     0xE3EC   ROM
 .stack                            64   R/W      0x100      0x13F   RAM
 .vectSeg0_vect                     2     R     0xFFFE     0xFFFF   .vectSeg0
 
 Summary of section sizes per section type:
-READ_ONLY (R):         3E1 (dec:      993)
+READ_ONLY (R):         3EF (dec:     1007)
 READ_WRITE (R/W):       4F (dec:       79)
 
 *********************************************************************************************
@@ -115,12 +115,12 @@ MODULE:                 -- main.asm.o --
      Tecla13                                   E2DE       7       7       0   .init       
      Tecla14                                   E2E5       4       4       0   .init       
      Tecla15                                   E2E9       7       7       0   .init       
-     Tecla16                                   E2F0       7       7       0   .init       
+     Tecla16                                   E2F0      15      21       0   .init       
 - VARIABLES:
      Baud_Serial                                 60       1       1       2   MY_ZEROPAGE 
      Data_TX                                     61       1       1      17   MY_ZEROPAGE 
      Long_Serial                                 62       1       1      10   MY_ZEROPAGE 
-     Tecla                                       63       1       1       9   MY_ZEROPAGE 
+     Tecla                                       63       1       1      11   MY_ZEROPAGE 
      Retardo                                     64       1       1       2   MY_ZEROPAGE 
      Estado                                      65       1       1      14   MY_ZEROPAGE 
      Espera                                      66       1       1       1   MY_ZEROPAGE 
@@ -130,15 +130,15 @@ MODULE:                 -- main.asm.o --
      Operando2                                   6A       1       1       8   MY_ZEROPAGE 
      Resultado                                   6B       1       1      11   MY_ZEROPAGE 
      Remainder                                   6C       2       2       4   MY_ZEROPAGE 
-     Verificacion                                6E       1       1      11   MY_ZEROPAGE 
-     Mensaje1                                  E2F7      16      22       0   CONSTANTES  
-     Mensaje2                                  E30D       E      14       0   CONSTANTES  
-     Mensaje3                                  E31B      15      21       0   CONSTANTES  
-     Mensaje4                                  E330      2B      43       2   CONSTANTES  
-     Mensaje5                                  E35B      2B      43       2   CONSTANTES  
-     Mensaje6                                  E386      30      48       2   CONSTANTES  
-     Mensaje7                                  E3B6      15      21       2   CONSTANTES  
-     Mensaje8                                  E3CB      14      20       2   CONSTANTES  
+     Verificacion                                6E       1       1      13   MY_ZEROPAGE 
+     Mensaje1                                  E305      16      22       0   CONSTANTES  
+     Mensaje2                                  E31B       E      14       0   CONSTANTES  
+     Mensaje3                                  E329      15      21       0   CONSTANTES  
+     Mensaje4                                  E33E      2B      43       2   CONSTANTES  
+     Mensaje5                                  E369      2B      43       2   CONSTANTES  
+     Mensaje6                                  E394      30      48       2   CONSTANTES  
+     Mensaje7                                  E3C4      15      21       2   CONSTANTES  
+     Mensaje8                                  E3D9      14      20       2   CONSTANTES  
 - LABELS:
      __SEG_END_SSTACK                           140       0       0       1               
 
@@ -146,7 +146,7 @@ MODULE:                 -- main.asm.o --
 MODULE STATISTIC
   Name                                      Data   Code  Const
 ---------------------------------------------------------------------------------------------
-  main.asm.o                                  15    759    232
+  main.asm.o                                  15    773    232
   other                                       64      2      0
 
 *********************************************************************************************
@@ -178,7 +178,7 @@ OBJECT LIST SORTED BY ADDRESS
      Baud_Serial                                 60       1       1       2   MY_ZEROPAGE 
      Data_TX                                     61       1       1      17   MY_ZEROPAGE 
      Long_Serial                                 62       1       1      10   MY_ZEROPAGE 
-     Tecla                                       63       1       1       9   MY_ZEROPAGE 
+     Tecla                                       63       1       1      11   MY_ZEROPAGE 
      Retardo                                     64       1       1       2   MY_ZEROPAGE 
      Estado                                      65       1       1      14   MY_ZEROPAGE 
      Espera                                      66       1       1       1   MY_ZEROPAGE 
@@ -188,7 +188,7 @@ OBJECT LIST SORTED BY ADDRESS
      Operando2                                   6A       1       1       8   MY_ZEROPAGE 
      Resultado                                   6B       1       1      11   MY_ZEROPAGE 
      Remainder                                   6C       2       2       4   MY_ZEROPAGE 
-     Verificacion                                6E       1       1      11   MY_ZEROPAGE 
+     Verificacion                                6E       1       1      13   MY_ZEROPAGE 
      main                                      E000       0       0       0   .init       
      _Startup                                  E000      34      52       0   .init       
      mainLoop                                  E034       8       8      10   .init       
@@ -259,15 +259,15 @@ OBJECT LIST SORTED BY ADDRESS
      Tecla13                                   E2DE       7       7       0   .init       
      Tecla14                                   E2E5       4       4       0   .init       
      Tecla15                                   E2E9       7       7       0   .init       
-     Tecla16                                   E2F0       7       7       0   .init       
-     Mensaje1                                  E2F7      16      22       0   CONSTANTES  
-     Mensaje2                                  E30D       E      14       0   CONSTANTES  
-     Mensaje3                                  E31B      15      21       0   CONSTANTES  
-     Mensaje4                                  E330      2B      43       2   CONSTANTES  
-     Mensaje5                                  E35B      2B      43       2   CONSTANTES  
-     Mensaje6                                  E386      30      48       2   CONSTANTES  
-     Mensaje7                                  E3B6      15      21       2   CONSTANTES  
-     Mensaje8                                  E3CB      14      20       2   CONSTANTES  
+     Tecla16                                   E2F0      15      21       0   .init       
+     Mensaje1                                  E305      16      22       0   CONSTANTES  
+     Mensaje2                                  E31B       E      14       0   CONSTANTES  
+     Mensaje3                                  E329      15      21       0   CONSTANTES  
+     Mensaje4                                  E33E      2B      43       2   CONSTANTES  
+     Mensaje5                                  E369      2B      43       2   CONSTANTES  
+     Mensaje6                                  E394      30      48       2   CONSTANTES  
+     Mensaje7                                  E3C4      15      21       2   CONSTANTES  
+     Mensaje8                                  E3D9      14      20       2   CONSTANTES  
 
 *********************************************************************************************
 UNUSED-OBJECTS SECTION
@@ -369,5 +369,5 @@ STATISTIC SECTION
 ExeFile:
 --------
 Number of blocks to be downloaded: 3
-Total size of all blocks to be downloaded: 993
+Total size of all blocks to be downloaded: 1007
 

@@ -65,7 +65,7 @@ _Startup:
             LDA    #%01010010
             STA    SOPT1        ; Desactiva el WatchDog
             mov    #0,Data_TX
-            mov    #30T,Baud_Serial
+            mov    #30T,Baud_Serial ;velocidad de comunicacion 25t es 9600 fbus/16/26=9600
             
             mov       #0T,Tecla            ; Inicializar Variables
             mov       #0T,Espera
@@ -525,3 +525,11 @@ Tecla16:
             mov       #47T,Tecla           ; Division
             mov       #7T,Verificacion
             rts
+Tecla17:
+            mov       #94T,Tecla           ; Potencias
+            mov       #8T,Verificacion
+            rts
+Tecla18:
+            mov       #33T,Tecla           ; Factorial
+            mov       #9T,Verificacion
+            rts			

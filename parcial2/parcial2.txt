@@ -1,0 +1,60 @@
+#include <hidef.h> /* for EnableInterrupts macro */
+#include <string.h>
+#include <stdio.h>
+#include "derivative.h" /* include peripheral declarations */
+
+unsigned char valor;  //Variables
+unsigned char valor_ADCR;
+unsigned char Error=0x45;
+unsigned char Conversion(unsigned char a);
+void TransmitirDato(unsigned char a);
+void Retardo1s(void);
+unsigned char RecibirDato(void);
+
+}
+void main(void) {
+    SOPT1 = 0b01010011;      //Apagar Wathdog
+	//-------------- Conf Serial --------------
+    SCIC2 = 0b00001000;
+    SCIC1 = 0b00000000;
+    SCIBD = 26;              // velocidad de Serial communication de 9600 baudios
+    //-------------- Conf pines --------------
+	PTADD = 0b00000001;      //configurar pines
+    //-------------- Conf ADC   --------------
+	ADCCFG = 0b10011000;     // Configuracion LOW POWER LONG SAMPLE TIME 10 
+    APCTL1 = 0b00001000;     // Configuracion ADCP3 como pin ADC
+    ADCSC1 = 0b01011010;     // inicializacion ADC interna con interrupcion
+    _asm cli;                //activa interrupciones globales
+//-------------- inicia algoritmo --------------
+valor_ADCR =RecibirDato();
+
+    if(SCIS1_RDRF < 8){
+		valor=Conversion(valor_ADCR );
+        TransmitirDato(valor ); 
+    } else if(SRS_PIN == 1){
+		TransmitirDato(Error); //enviar mensaje
+   }
+Retardo1s();
+}
+
+
+unsigned char RecibirDato(void){
+while(SCIS1_RDRF==0);
+return SCID;
+}
+void TransmitirDato(unsigned char a){
+while(SCIS1_TDRE==0);
+SCID=a;
+}
+void Retardo1s(void){
+unsigned long i;
+for(i=0;i<12306;i++);
+}
+unsigned char Conversion(unsigned char a){
+ADCSC1=(ADCSC1 & 0b11100000) | a;
+while(ADCSC1_COCO==0);
+retur
+n ADCRL;
+}
+
+
