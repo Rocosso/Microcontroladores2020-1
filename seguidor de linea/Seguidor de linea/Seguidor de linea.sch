@@ -1,0 +1,449 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Diseño PCB seguidor de Linea"
+Date "3 de Julio"
+Rev ""
+Comp "Proyecto final Microcontroladores 2020-i"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_NXP_S08:MC9S08QG8xPBE IC1
+U 1 1 5EFFBD82
+P 2900 2350
+F 0 "IC1" H 2900 3431 50  0000 C CNN
+F 1 "MC9S08QG8xPBE" H 2900 3340 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 3100 1600 50  0001 L CIN
+F 3 "http://cache.nxp.com/files/microcontrollers/doc/data_sheet/MC9S08QG8.pdf" H 3000 2150 50  0001 C CNN
+	1    2900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Proximity:CNY70 U1
+U 1 1 5EFFD1F5
+P 5700 950
+F 0 "U1" H 5700 1267 50  0000 C CNN
+F 1 "CNY70" H 5700 1176 50  0000 C CNN
+F 2 "OptoDevice:Vishay_CNY70" H 5700 750 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/83751/cny70.pdf" H 5700 1050 50  0001 C CNN
+	1    5700 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J5
+U 1 1 5F000711
+P 6800 2800
+F 0 "J5" H 6828 2776 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 6828 2685 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical_SMD_Pin1Right" H 6800 2800 50  0001 C CNN
+F 3 "~" H 6800 2800 50  0001 C CNN
+	1    6800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J6
+U 1 1 5F002CA0
+P 6800 3250
+F 0 "J6" H 6828 3226 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 6828 3135 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical_SMD_Pin1Right" H 6800 3250 50  0001 C CNN
+F 3 "~" H 6800 3250 50  0001 C CNN
+	1    6800 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J4
+U 1 1 5F003080
+P 5500 3250
+F 0 "J4" H 5528 3226 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 5528 3135 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical_SMD_Pin1Right" H 5500 3250 50  0001 C CNN
+F 3 "~" H 5500 3250 50  0001 C CNN
+	1    5500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J3
+U 1 1 5F0035AD
+P 5450 2750
+F 0 "J3" H 5478 2726 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 5478 2635 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical_SMD_Pin1Right" H 5450 2750 50  0001 C CNN
+F 3 "~" H 5450 2750 50  0001 C CNN
+	1    5450 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F003D5A
+P 5250 1050
+F 0 "R1" V 5043 1050 50  0000 C CNN
+F 1 "180" V 5134 1050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5180 1050 50  0001 C CNN
+F 3 "~" H 5250 1050 50  0001 C CNN
+	1    5250 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F006136
+P 6150 850
+F 0 "R3" V 5943 850 50  0000 C CNN
+F 1 "10k" V 6034 850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6080 850 50  0001 C CNN
+F 3 "~" H 6150 850 50  0001 C CNN
+	1    6150 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 850  5050 850 
+Wire Wire Line
+	5050 850  5050 800 
+Wire Wire Line
+	6000 1050 6000 1200
+Wire Wire Line
+	5050 1200 5050 850 
+Connection ~ 5050 850 
+Wire Wire Line
+	6300 850  6300 1150
+Wire Wire Line
+	6300 1150 5100 1150
+Wire Wire Line
+	5100 1150 5100 1050
+Wire Wire Line
+	5050 1200 6000 1200
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5F0087D1
+P 1750 950
+F 0 "#PWR0101" H 1750 800 50  0001 C CNN
+F 1 "+3.3V" H 1765 1123 50  0000 C CNN
+F 2 "" H 1750 950 50  0001 C CNN
+F 3 "" H 1750 950 50  0001 C CNN
+	1    1750 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 5F008E1D
+P 5050 800
+F 0 "#PWR0102" H 5050 650 50  0001 C CNN
+F 1 "+5V" H 5065 973 50  0000 C CNN
+F 2 "" H 5050 800 50  0001 C CNN
+F 3 "" H 5050 800 50  0001 C CNN
+	1    5050 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0103
+U 1 1 5F00993A
+P 6300 1150
+F 0 "#PWR0103" H 6300 900 50  0001 C CNN
+F 1 "GNDREF" H 6305 977 50  0000 C CNN
+F 2 "" H 6300 1150 50  0001 C CNN
+F 3 "" H 6300 1150 50  0001 C CNN
+	1    6300 1150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6300 1150
+$Comp
+L Sensor_Proximity:CNY70 U2
+U 1 1 5F012B64
+P 5750 1800
+F 0 "U2" H 5750 2117 50  0000 C CNN
+F 1 "CNY70" H 5750 2026 50  0000 C CNN
+F 2 "OptoDevice:Vishay_CNY70" H 5750 1600 50  0001 C CNN
+F 3 "https://www.vishay.com/docs/83751/cny70.pdf" H 5750 1900 50  0001 C CNN
+	1    5750 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F012B6A
+P 5300 1900
+F 0 "R2" V 5093 1900 50  0000 C CNN
+F 1 "180" V 5184 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5230 1900 50  0001 C CNN
+F 3 "~" H 5300 1900 50  0001 C CNN
+	1    5300 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F012B70
+P 6200 1700
+F 0 "R4" V 5993 1700 50  0000 C CNN
+F 1 "10k" V 6084 1700 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6130 1700 50  0001 C CNN
+F 3 "~" H 6200 1700 50  0001 C CNN
+	1    6200 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 1700 5100 1700
+Wire Wire Line
+	5100 1700 5100 1650
+Wire Wire Line
+	6050 1900 6050 2050
+Wire Wire Line
+	5100 2050 5100 1700
+Connection ~ 5100 1700
+Wire Wire Line
+	6350 1700 6350 2000
+Wire Wire Line
+	6350 2000 5150 2000
+Wire Wire Line
+	5150 2000 5150 1900
+Wire Wire Line
+	5100 2050 6050 2050
+$Comp
+L power:+5V #PWR0104
+U 1 1 5F012B7F
+P 5100 1650
+F 0 "#PWR0104" H 5100 1500 50  0001 C CNN
+F 1 "+5V" H 5115 1823 50  0000 C CNN
+F 2 "" H 5100 1650 50  0001 C CNN
+F 3 "" H 5100 1650 50  0001 C CNN
+	1    5100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0105
+U 1 1 5F012B85
+P 6350 2000
+F 0 "#PWR0105" H 6350 1750 50  0001 C CNN
+F 1 "GNDREF" H 6355 1827 50  0000 C CNN
+F 2 "" H 6350 2000 50  0001 C CNN
+F 3 "" H 6350 2000 50  0001 C CNN
+	1    6350 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 6350 2000
+Wire Wire Line
+	6000 850  6000 750 
+Wire Wire Line
+	6000 750  6600 750 
+Connection ~ 6000 850 
+Wire Wire Line
+	6050 1700 6050 1550
+Wire Wire Line
+	6050 1550 6450 1550
+Connection ~ 6050 1700
+Text GLabel 6450 1550 2    50   Input ~ 0
+pin15-ADP1
+Text GLabel 3800 1950 2    50   Input ~ 0
+pin15-ADP1
+Text GLabel 5250 2750 0    50   Input ~ 0
+5v
+Text GLabel 5300 3250 0    50   Input ~ 0
+5v
+Text GLabel 5100 1700 0    50   Input ~ 0
+5v
+Text GLabel 5050 850  0    50   Input ~ 0
+5v
+Text GLabel 6600 2800 0    50   Input ~ 0
+3.3v
+Text GLabel 6600 3250 0    50   Input ~ 0
+3.3v
+Text GLabel 1550 950  0    50   Input ~ 0
+3.3v
+$Comp
+L power:GNDREF #PWR0106
+U 1 1 5F017BAD
+P 5250 2850
+F 0 "#PWR0106" H 5250 2600 50  0001 C CNN
+F 1 "GNDREF" H 5255 2677 50  0000 C CNN
+F 2 "" H 5250 2850 50  0001 C CNN
+F 3 "" H 5250 2850 50  0001 C CNN
+	1    5250 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0107
+U 1 1 5F018B34
+P 5300 3350
+F 0 "#PWR0107" H 5300 3100 50  0001 C CNN
+F 1 "GNDREF" H 5305 3177 50  0000 C CNN
+F 2 "" H 5300 3350 50  0001 C CNN
+F 3 "" H 5300 3350 50  0001 C CNN
+	1    5300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0108
+U 1 1 5F0191D6
+P 6600 3350
+F 0 "#PWR0108" H 6600 3100 50  0001 C CNN
+F 1 "GNDREF" H 6605 3177 50  0000 C CNN
+F 2 "" H 6600 3350 50  0001 C CNN
+F 3 "" H 6600 3350 50  0001 C CNN
+	1    6600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0109
+U 1 1 5F01965E
+P 6600 2900
+F 0 "#PWR0109" H 6600 2650 50  0001 C CNN
+F 1 "GNDREF" H 6605 2727 50  0000 C CNN
+F 2 "" H 6600 2900 50  0001 C CNN
+F 3 "" H 6600 2900 50  0001 C CNN
+	1    6600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR0110
+U 1 1 5F019AA5
+P 2900 3250
+F 0 "#PWR0110" H 2900 3000 50  0001 C CNN
+F 1 "GNDREF" H 2905 3077 50  0000 C CNN
+F 2 "" H 2900 3250 50  0001 C CNN
+F 3 "" H 2900 3250 50  0001 C CNN
+	1    2900 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 2900 1450 0    50   Input ~ 0
+3.3v
+Text GLabel 3800 2450 2    50   Input ~ 0
+TX-TransmisionSerial
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 5F01A398
+P 5150 4050
+F 0 "J2" H 5178 4026 50  0000 L CNN
+F 1 "Reprogramacion del micro" H 5178 3935 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 5150 4050 50  0001 C CNN
+F 3 "~" H 5150 4050 50  0001 C CNN
+	1    5150 4050
+	1    0    0    -1  
+$EndComp
+Text GLabel 4950 4050 0    50   Input ~ 0
+BKGDM
+Text GLabel 2000 2150 0    50   Input ~ 0
+BKGDM
+Text GLabel 4950 4150 0    50   Input ~ 0
+Reset
+Text GLabel 2000 2050 0    50   Input ~ 0
+Reset
+$Comp
+L MCU_Module:Arduino_UNO_R2 A1
+U 1 1 5F01B7F0
+P 10650 1700
+F 0 "A1" H 10650 2881 50  0000 C CNN
+F 1 "Arduino_UNO_R2" H 10650 2790 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R2" H 10800 650 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 10450 2750 50  0001 C CNN
+	1    10650 1700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 10550 700 
+NoConn ~ 10750 700 
+NoConn ~ 10850 700 
+NoConn ~ 11150 1100
+NoConn ~ 11150 1300
+NoConn ~ 11150 1500
+NoConn ~ 11150 1700
+NoConn ~ 11150 1800
+NoConn ~ 11150 1900
+NoConn ~ 11150 2000
+NoConn ~ 11150 2100
+NoConn ~ 11150 2200
+NoConn ~ 10750 2800
+NoConn ~ 10650 2800
+NoConn ~ 10550 2800
+NoConn ~ 10150 2400
+NoConn ~ 10150 2300
+NoConn ~ 10150 2200
+NoConn ~ 10150 2100
+NoConn ~ 10150 2000
+NoConn ~ 10150 1900
+NoConn ~ 10150 1800
+NoConn ~ 10150 1700
+NoConn ~ 10150 1600
+NoConn ~ 10150 1500
+NoConn ~ 10150 1400
+NoConn ~ 10150 1300
+NoConn ~ 10150 1200
+NoConn ~ 10150 1100
+Text GLabel 3800 2850 2    50   Input ~ 0
+TMPCH1-PWM_Derecha
+Text GLabel 3400 3800 2    50   Input ~ 0
+TMPCH1-PWM_Derecha
+Text GLabel 3800 1850 2    50   Input ~ 0
+TMPCH2_PWM_Izquierda
+Text GLabel 3400 3700 2    50   Input ~ 0
+TMPCH2_PWM_Izquierda
+Text GLabel 3800 2050 2    50   Input ~ 0
+pin14-ADP2
+Text GLabel 6600 750  2    50   Input ~ 0
+pin14-ADP2
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 5F0254CF
+P 3200 3800
+F 0 "J1" H 3092 3475 50  0000 C CNN
+F 1 "PWM MOTORES DC" H 3092 3566 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 3200 3800 50  0001 C CNN
+F 3 "~" H 3200 3800 50  0001 C CNN
+	1    3200 3800
+	-1   0    0    1   
+$EndComp
+NoConn ~ 3800 2150
+NoConn ~ 3800 2350
+NoConn ~ 3800 2550
+NoConn ~ 3800 2650
+NoConn ~ 3800 2750
+NoConn ~ 2000 2850
+NoConn ~ 2000 2750
+$Comp
+L Device:C C2
+U 1 1 5F027540
+P 1900 1100
+F 0 "C2" H 2015 1146 50  0000 L CNN
+F 1 "0.1uF" H 2015 1055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 1938 950 50  0001 C CNN
+F 3 "~" H 1900 1100 50  0001 C CNN
+	1    1900 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5F027DCA
+P 1550 1100
+F 0 "C1" H 1668 1146 50  0000 L CNN
+F 1 "10uF" H 1668 1055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 1588 950 50  0001 C CNN
+F 3 "~" H 1550 1100 50  0001 C CNN
+	1    1550 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 950  1750 950 
+Wire Wire Line
+	1550 1250 1700 1250
+Connection ~ 1750 950 
+Wire Wire Line
+	1750 950  1900 950 
+$Comp
+L power:GNDREF #PWR0111
+U 1 1 5F029637
+P 1700 1250
+F 0 "#PWR0111" H 1700 1000 50  0001 C CNN
+F 1 "GNDREF" H 1705 1077 50  0000 C CNN
+F 2 "" H 1700 1250 50  0001 C CNN
+F 3 "" H 1700 1250 50  0001 C CNN
+	1    1700 1250
+	1    0    0    -1  
+$EndComp
+Connection ~ 1700 1250
+Wire Wire Line
+	1700 1250 1900 1250
+Text GLabel 2900 3250 0    50   Input ~ 0
+GND
+$EndSCHEMATC

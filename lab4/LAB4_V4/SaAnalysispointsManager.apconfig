@@ -1,0 +1,24 @@
+<Analysispoints>
+	<Name>AnalysispointsManager</Name>
+	<ProjectPath></ProjectPath>
+	<MaxNumberOfCores>1</MaxNumberOfCores>
+	<Comments>Analysispoints Manager</Comments>
+	<IgnoreAll>false</IgnoreAll>
+	<SpecializedManager>
+		<Name>Hcs08TracepointsManager</Name>
+		<Comments>Hcs08 Tracepoints Manager</Comments>
+	</SpecializedManager>
+	<Core>
+		<Name>0</Name>
+		<Tracepoint>
+			<Uuid>0208377e-2926-4686-a21a-4cdb4cf4a9b5</Uuid>
+			<Source>Sources/main.c</Source>
+			<Type>2</Type>
+			<Action>1</Action>
+			<Line>40</Line>
+			<Address>0</Address>
+			<Installed>false</Installed>
+			<Enabled>true</Enabled>
+		</Tracepoint>
+	</Core>
+</Analysispoints>

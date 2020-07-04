@@ -1,0 +1,251 @@
+#include <hidef.h>       /* for EnableInterrupts macro */
+#include "derivative.h"  /* include peripheral declarations */
+#include <stdio.h>       //uso de operaciones en C
+#include <string.h>      //uso de mensajes largos por uso de strings de C
+ 
+#define BIT(posicion) (1<<(posicion))
+
+void SCI_send(char);
+void calculadora();
+unsigned char flag_rx;		//variable dummy para mecanismo que limpia interrupcion de SCI_rx
+unsigned char *msg1="error, se esperaba un valor entre 0 y 9";
+unsigned char msg2='error, se esperaba operando + - * /';
+unsigned char msg3='error, divición por 0';
+unsigned char msg4='error, se esperaba operador ='; //mensajes de error en caso de equivocacion al teclear
+unsigned char operando;
+unsigned int valor1,valor2,valor,dato;
+unsigned int verif,posicion;         // variable que cuenta en que paso esta el calculo
+unsigned int i=0;
+
+void kbi_init() {
+	KBISC_KBIE = 0;             //deshabilitar interrupcion para evitar falsas interrupciones
+	KBISC_KBIMOD = 0;			//interrupcion por solo flanco
+	KBIES = 0x00;				//interrupcion por flanco de bajada y nivel bajo	
+	KBIPE = 0x80;		        //habilitacion de pines como fuente de interrupcion
+	KBISC_KBACK = 0;			//bandera para evitar falsas interrupciones
+	KBISC_KBIE = 1;			    //habilitacion de la interrupcion por KBI
+	
+}
+
+interrupt 18 void KBI_ISR() {
+	KBISC_KBACK = 1;				//acknowledge de la interrupcion por kbi
+	SCI_send(14);
+}
+
+interrupt VectorNumber_Vscirx void SCI_RX(){ //funcion para recepcion de informacion 
+	flag_rx=SCIS1_RDRF; //Verifica si ha recibido dato y guarda en flag
+	if(SCID == 101){
+			PTBD_PTBD0 = !PTBD_PTBD0;
+		}
+}
+
+void SCI_init(){
+	SCIBDH = 0;
+	SCIBDL = 26;  //baud rate de 9600
+	SCIC1 = 0x00; //CONFIGURA EL PRIMER REGISTRO
+	SCIC2_TE = 1; //HABILITA TRANSMISION
+	SCIC2_RE = 1; //HABILITA RECEPCION
+	SCIC2_RIE = 1; //HABILITA INTERRUPCION DEL RECEPTOR
+}
+
+void SCI_send(char dato){
+	while(SCIS1_TDRE == 0); //si no hay dato en el registro puede enviar
+	SCID = dato+48; //para convertirlo a ASCII y enviarlo
+	return;
+}
+
+void verificacion(){
+	switch(verif){
+	case'1':
+		dato=valor;
+		valor1=valor;
+		if((dato!='+'-48) && (dato!='-'-48) && (dato!='*'-48) && (dato!='/'-48)){ //si es algo diferente a operacion
+			SCI_send(dato);
+			verif=2;
+		}
+		else{
+			SCI_send(msg1);
+		}
+		//luego de recibir la tecla de KBI
+		//envia dato
+		//solo admite tecleado de numeros
+		
+	case'2':
+		dato=operando;
+		if((dato=='+'-48) && (dato=='-'-48) && (dato=='*'-48) && (dato=='/'-48)){
+					SCI_send(dato);
+					verif=3;
+				}
+				else{
+					SCI_send(msg2);
+				}
+		//luego de recibir la tecla de KBI
+				//envia dato
+		//solo admite tecleado de operaciones
+		
+	case'3':
+		valor2=valor;
+		dato=valor2;
+		if((dato!='+'-48) && (dato!='-'-48) && (dato!='*'-48) && (dato!='/'-48)){
+			SCI_send(dato);
+			verif=4;
+			}
+		else{
+			SCI_send(msg1);
+			}
+		//luego de recibir la tecla de KBI
+				//envia dato
+		//solo admite tecleado de numeros
+		
+	case'4':
+		valor2=valor;
+		dato=valor2;
+		if(dato== '='-48){
+			calculadora();
+			SCI_send(dato);
+			verif=0;
+			}
+		else{
+			SCI_send(msg4);
+			}
+		//luego de recibir la tecla de KBI
+				//envia dato
+		//solo admite tecleado de =
+	case'5':
+		if(valor1==' '){
+			verif=1;	
+			}
+			else{
+				if(operando==' '){
+					verif=2;
+				}
+				else{
+					if(valor2==' '){
+						verif=3;
+					}
+				}
+			}
+		SCI_send(valor1);
+		SCI_send(operando);
+		SCI_send(valor2);
+	}
+}
+ 
+void LecturaTeclado(){ //operando
+	PTAD |= BIT(4);
+if (PTBD == 0b00000001){ 
+	operando='*'; 
+}
+if (PTBD == 0b00000010){
+	valor='=';
+}
+if (PTBD == 0b00000100){
+	valor='0';
+}
+if (PTBD == 0b00001000){
+	valor='d';
+		
+		for(i;i<1000;i++){
+			SCI_send(' ');
+		}
+		if(verif==1){
+				valor1=' ';
+			}
+			else{
+				if(verif==2){
+					operando=' ';
+				}
+				else{
+					if(verif==3){
+						valor2=' ';
+					}
+				}
+			}
+		verif=5;
+}
+PTAD &= ~BIT(4);
+PTAD |= BIT(5);
+if (PTBD == 0b00000001){
+	operando='/';
+}
+if (PTBD == 0b00000010){
+	valor='9';
+}
+if (PTBD == 0b00000100){
+	valor='8';
+}
+if (PTBD == 0b00001000){
+	valor='7';
+}
+PTAD &= ~BIT(5);
+PTAD |= BIT(6);
+if (PTBD == 0b00000001){
+	operando='-';
+}
+if (PTBD == 0b00000010){
+	valor='6';
+}
+if (PTBD == 0b00000100){
+	valor='5';
+}
+if (PTBD == 0b00001000){
+	valor='4';
+}
+PTAD &= ~BIT(6);
+PTAD |= BIT(7);
+if (PTBD == 0b00000001){
+	operando='+';
+}
+if (PTBD == 0b00000010){
+	valor='3';
+}
+if (PTBD == 0b00000100){
+	valor='2';
+}
+if (PTBD == 0b00001000){
+	valor='1';
+}
+PTAD &= ~BIT(7);
+verif=1;
+verificacion();
+}
+
+
+void calculadora(){
+	switch(operando){
+	case'+':
+		dato=valor1+valor2;
+	case'-':
+		dato=valor1-valor2;
+	case'*':
+		dato=valor1*valor2;
+	case'/':
+		dato=valor1/valor2;
+		if(valor2==0){
+			SCI_send(msg3);
+		}
+	}
+	valor1=' ';
+	operando=' ';
+	valor2=' ';   //limpia variables para reiniciar el calculo	
+}
+
+void main(void) {
+	SOPT1 = 0b01010010;
+	PTBDD = 0b00001111;			//inicializacion del puerto B
+	PTBPE = 0x80;				//enable resistencias pull	
+	
+	PTBDD_PTBDD0 = 1;
+	PTBD_PTBD0 = 1;
+	
+	kbi_init();
+	SCI_init();
+	
+  EnableInterrupts;  
+
+  for(;;) {
+	  LecturaTeclado();
+	  
+  } /* loop forever */
+  /* please make sure that you never leave main */
+}

@@ -1,0 +1,292 @@
+!SESSION 2020-06-28 22:50:13.867 -----------------------------------------------
+eclipse.buildId=I20070613-1755
+java.version=1.6.0_15
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en
+Framework arguments:  E:\Documentos\Universidad\2020-I\Microcontroladores\laboratoriosmicros\Laboratorios Micros 2019\Practica5_C\.cproject
+Command-line arguments:  -os win32 -ws win32 -arch x86 E:\Documentos\Universidad\2020-I\Microcontroladores\laboratoriosmicros\Laboratorios Micros 2019\Practica5_C\.cproject
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:50:35.853
+!MESSAGE NLS missing message: ContentTypes_errorDialogAlreadyExists in: org.eclipse.ui.internal.messages
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:44.320
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/arm' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:44.326
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/cf' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:44.328
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/ppc' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:44.331
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.0/patches' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:46.194
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/arm' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:46.197
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/cf' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:46.199
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/ppc' does not exist
+
+!ENTRY com.freescale.core.ide.wizard.ui 2 0 2020-06-28 22:50:46.202
+!MESSAGE External elements location 'C:\Freescale\CW MCU v10.7\eclipse\../MCU/lib/wizard_data/mqx/4.1/patches' does not exist
+
+!ENTRY com.freescale.processorexpert.core 1 0 2020-06-28 22:50:53.089
+!MESSAGE Plugin com.freescale.processorexpert.core.service ProcessorExpertServiceProvider
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.543
+!MESSAGE NLS unused message: ProjectNamePage_title in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.566
+!MESSAGE NLS unused message: ProjectNamePage_Description in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.568
+!MESSAGE NLS unused message: OptionsPage_5 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.570
+!MESSAGE NLS unused message: OptionsPage_8 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.572
+!MESSAGE NLS unused message: OptionsPage_9 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.574
+!MESSAGE NLS unused message: OptionsPage_10 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.576
+!MESSAGE NLS unused message: OptionsPage_30 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.587
+!MESSAGE NLS unused message: SingleEditableTable_0 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.589
+!MESSAGE NLS unused message: SingleEditableTable_1 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.591
+!MESSAGE NLS unused message: SingleEditableTable_2 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.593
+!MESSAGE NLS unused message: SingleEditableTable_3 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.596
+!MESSAGE NLS unused message: MultiEditableTable_0 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.598
+!MESSAGE NLS unused message: MultiEditableTable_2 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.600
+!MESSAGE NLS unused message: MultiEditableTable_3 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.602
+!MESSAGE NLS unused message: MultiEditableTable_4 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.605
+!MESSAGE NLS unused message: MultiEditableTable_5 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.607
+!MESSAGE NLS unused message: AccessPathPage_0 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.609
+!MESSAGE NLS unused message: AccessPathPage_1 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.611
+!MESSAGE NLS unused message: AccessPathPage_2 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.613
+!MESSAGE NLS unused message: AccessPathPage_3 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.614
+!MESSAGE NLS unused message: AccessPathPage_8 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.616
+!MESSAGE NLS unused message: AccessPathPage_9 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.619
+!MESSAGE NLS unused message: AccessPathPage_10 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.621
+!MESSAGE NLS unused message: AccessPathPage_11 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.623
+!MESSAGE NLS unused message: GlobalsPage_0 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.625
+!MESSAGE NLS unused message: GlobalsPage_1 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.627
+!MESSAGE NLS unused message: GlobalsPage_2 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.629
+!MESSAGE NLS unused message: GlobalsPage_7 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.631
+!MESSAGE NLS unused message: GlobalsPage_8 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.633
+!MESSAGE NLS unused message: GlobalsPage_9 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.635
+!MESSAGE NLS unused message: GlobalsPage_10 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.637
+!MESSAGE NLS unused message: GlobalsPage_12 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.639
+!MESSAGE NLS unused message: GlobalsPage_13 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.641
+!MESSAGE NLS unused message: FileNotFoundPage_0 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.643
+!MESSAGE NLS unused message: FileNotFoundPage_1 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.645
+!MESSAGE NLS unused message: FileNotFoundPage_2 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.647
+!MESSAGE NLS unused message: FileNotFoundPage_unresolved in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.649
+!MESSAGE NLS unused message: FileNotFoundPage_unresolvedWithDependents in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.651
+!MESSAGE NLS unused message: FileNotFoundPage_4 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.653
+!MESSAGE NLS unused message: FileNotFoundPage_5 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.655
+!MESSAGE NLS unused message: FileNotFoundPage_6 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.657
+!MESSAGE NLS unused message: OptionsPage_1 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.659
+!MESSAGE NLS unused message: OptionsPage_2 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.661
+!MESSAGE NLS unused message: OptionsPage_3 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.663
+!MESSAGE NLS unused message: OptionsPage_5 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.665
+!MESSAGE NLS unused message: OptionsPage_6 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.667
+!MESSAGE NLS unused message: OptionsPage_7 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.669
+!MESSAGE NLS unused message: OptionsPage_8 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.671
+!MESSAGE NLS unused message: OptionsPage_9 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.673
+!MESSAGE NLS unused message: OptionsPage_10 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.675
+!MESSAGE NLS unused message: OptionsPage_14 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.678
+!MESSAGE NLS unused message: OptionsPage_15 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.680
+!MESSAGE NLS unused message: OptionsPage_16 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.682
+!MESSAGE NLS unused message: OptionsPage_19 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.684
+!MESSAGE NLS unused message: OptionsPage_20 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.686
+!MESSAGE NLS unused message: OptionsPage_21 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.688
+!MESSAGE NLS unused message: OptionsPage_22 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.690
+!MESSAGE NLS unused message: OptionsPage_23 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.692
+!MESSAGE NLS unused message: OptionsPage_24 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.694
+!MESSAGE NLS unused message: OptionsPage_25 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.696
+!MESSAGE NLS unused message: OptionsPage_26 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.699
+!MESSAGE NLS unused message: OptionsPage_27 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.701
+!MESSAGE NLS unused message: OptionsPage_28 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.703
+!MESSAGE NLS unused message: OptionsPage_29 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.705
+!MESSAGE NLS unused message: OptionsPage_30 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.707
+!MESSAGE NLS unused message: OptionsPage_31 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.709
+!MESSAGE NLS unused message: OptionsPage_32 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.711
+!MESSAGE NLS unused message: OptionsPage_33 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.714
+!MESSAGE NLS unused message: OptionsPage_34 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.716
+!MESSAGE NLS unused message: OptionsPage_35 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.718
+!MESSAGE NLS unused message: OptionsPage_AdvancedOptions in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.720
+!MESSAGE NLS unused message: OptionsPage_ImportSubProjects in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.722
+!MESSAGE NLS unused message: LoaderPage_0 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.724
+!MESSAGE NLS unused message: LoaderPage_1 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.727
+!MESSAGE NLS unused message: LoaderPage_2 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.729
+!MESSAGE NLS unused message: LoaderPage_3 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.731
+!MESSAGE NLS unused message: LoaderPage_4 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.733
+!MESSAGE NLS unused message: LoaderPage_6 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.735
+!MESSAGE NLS unused message: LoaderPage_7 in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.737
+!MESSAGE NLS unused message: LoaderPage_invalidProjectFile in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.740
+!MESSAGE NLS unused message: AccessPathPage_FlattenRecursiveAccessPaths in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.742
+!MESSAGE NLS unused message: ImporterWizard_ImportingProject in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.744
+!MESSAGE NLS missing message: ProjectNamePage_label in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.746
+!MESSAGE NLS missing message: ProjectNamePage_error in: com.freescale.core.ide.cwprojectImporter.wizards.messages
+
+!ENTRY org.eclipse.osgi 2 1 2020-06-28 22:52:28.749
+!MESSAGE NLS missing message: ProjectLocationPage_error in: com.freescale.core.ide.cwprojectImporter.wizards.messages

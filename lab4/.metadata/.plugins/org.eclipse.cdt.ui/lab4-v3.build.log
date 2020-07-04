@@ -1,0 +1,156 @@
+
+**** Build of configuration FLASH for project lab4-v3 ****
+
+"C:\\Freescale\\CW MCU v10.7\\gnu\\bin\\mingw32-make" -j8 all 
+'Building file: ../Sources/main.c'
+'Building file: ../Sources/Events.c'
+'Building file: ../Project_Settings/Startup_Code/start08.c'
+'Building file: ../Generated_Code/Cpu.c'
+'Building file: ../Generated_Code/IO_Map.c'
+'Building file: ../Generated_Code/Vectors.c'
+'Executing target #1 ../Sources/Events.c'
+'Executing target #2 ../Sources/main.c'
+'Executing target #3 ../Project_Settings/Startup_Code/start08.c'
+'Executing target #4 ../Generated_Code/Cpu.c'
+'Executing target #5 ../Generated_Code/IO_Map.c'
+'Executing target #6 ../Generated_Code/Vectors.c'
+'Invoking: HCS08 Compiler'
+'Invoking: HCS08 Compiler'
+'Invoking: HCS08 Compiler'
+'Invoking: HCS08 Compiler'
+'Invoking: HCS08 Compiler'
+"C:/Freescale/CW MCU v10.7/MCU/prog/chc08" -ArgFile"Sources/Events.args" -ObjN="Sources/Events_c.obj" "../Sources/Events.c" -Lm="Sources/Events_c.d" -LmCfg=xilmou
+'Invoking: HCS08 Compiler'
+"C:/Freescale/CW MCU v10.7/MCU/prog/chc08" -ArgFile"Sources/main.args" -ObjN="Sources/main_c.obj" "../Sources/main.c" -Lm="Sources/main_c.d" -LmCfg=xilmou
+"C:/Freescale/CW MCU v10.7/MCU/prog/chc08" -ArgFile"Project_Settings/Startup_Code/start08.args" -ObjN="Project_Settings/Startup_Code/start08_c.obj" "../Project_Settings/Startup_Code/start08.c" -Lm="Project_Settings/Startup_Code/start08_c.d" -LmCfg=xilmou
+"C:/Freescale/CW MCU v10.7/MCU/prog/chc08" -ArgFile"Generated_Code/Cpu.args" -ObjN="Generated_Code/Cpu_c.obj" "../Generated_Code/Cpu.c" -Lm="Generated_Code/Cpu_c.d" -LmCfg=xilmou
+"C:/Freescale/CW MCU v10.7/MCU/prog/chc08" -ArgFile"Generated_Code/IO_Map.args" -ObjN="Generated_Code/IO_Map_c.obj" "../Generated_Code/IO_Map.c" -Lm="Generated_Code/IO_Map_c.d" -LmCfg=xilmou
+"C:/Freescale/CW MCU v10.7/MCU/prog/chc08" -ArgFile"Generated_Code/Vectors.args" -ObjN="Generated_Code/Vectors_c.obj" "../Generated_Code/Vectors.c" -Lm="Generated_Code/Vectors_c.d" -LmCfg=xilmou
+../Generated_Code/Cpu.c
+../Project_Settings/Startup_Code/start08.c
+../Generated_Code/IO_Map.c
+Command Line: '-ArgFile"Generated_Code/Cpu.args" -ObjN="Generated_Code/Cpu_c.obj" "../Generated_Code/Cpu.c" -Lm="Generated_Code/Cpu_c.d" -LmCfg=xilmou'
+Command Line: '-ArgFile"Generated_Code/IO_Map.args" -ObjN="Generated_Code/IO_Map_c.obj" "../Generated_Code/IO_Map.c" -Lm="Generated_Code/IO_Map_c.d" -LmCfg=xilmou'
+Command Line: '-ArgFile"Project_Settings/Startup_Code/start08.args" -ObjN="Project_Settings/Startup_Code/start08_c.obj" "../Project_Settings/Startup_Code/start08.c" -Lm="Project_Settings/Startup_Code/start08_c.d" -LmCfg=xilmou'
+../Generated_Code/Vectors.c
+Command Line: '-ArgFile"Generated_Code/Vectors.args" -ObjN="Generated_Code/Vectors_c.obj" "../Generated_Code/Vectors.c" -Lm="Generated_Code/Vectors_c.d" -LmCfg=xilmou'
+../Sources/main.c
+Command Line: '-ArgFile"Sources/main.args" -ObjN="Sources/main_c.obj" "../Sources/main.c" -Lm="Sources/main_c.d" -LmCfg=xilmou'
+../Sources/Events.c
+Command Line: '-ArgFile"Sources/Events.args" -ObjN="Sources/Events_c.obj" "../Sources/Events.c" -Lm="Sources/Events_c.d" -LmCfg=xilmou'
+E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Headers\../Generated_Code\IO_Map.c
+E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Headers\../Project_Settings/Startup_Code\start08.c
+E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Headers\../Sources\main.c
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Types.h
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\Cpu.h
+ "C:/Freescale/CW MCU v10.7/MCU/lib/hc08c/include\start08.h"
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Types.h
+  "C:/Freescale/CW MCU v10.7/MCU/lib/hc08c/include\hidef.h"
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\IO_Map.h
+   "C:/Freescale/CW MCU v10.7/MCU/lib/hc08c/include\stddef.h"
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Error.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Const.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\IO_Map.h
+E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Headers\../Generated_Code\Cpu.c
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Types.h
+Option -Lm Update: Create new dependency file
+Option -Lm: Adding make info to 'Generated_Code/IO_Map_c.d'
+E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Headers\../Generated_Code\Vectors.c
+E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Headers\../Sources\Events.c
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\Cpu.h
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\Cpu.h
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Error.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Types.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Types.h
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Const.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Error.h
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\IO_Map.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Const.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Error.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\IO_Map.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\PE_Const.h
+  E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\IO_Map.h
+   "C:/Freescale/CW MCU v10.7/MCU/lib/hc08c/include\stdtypes.h"
+  "C:/Freescale/CW MCU v10.7/MCU/lib/hc08c/include\non_bank.sgm"
+ "C:/Freescale/CW MCU v10.7/MCU/lib/hc08c/include\non_bank.sgm"
+Option -Lm Update: Create new dependency file
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Sources\Events.h
+Option -Lm Update: Create new dependency file
+Option -Lm Update: Create new dependency file
+Option -Lm: Adding make info to 'Generated_Code/Vectors_c.d'
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Sources\Events.h
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Generated_Code\Cpu.h
+Option -Lm Update: Create new dependency file
+Option -Lm: Adding make info to 'Generated_Code/Cpu_c.d'
+Option -Lm: Adding make info to 'Project_Settings/Startup_Code/start08_c.d'
+Option -Lm: Adding make info to 'Sources/main_c.d'
+ E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Sources\Events.h
+Option -Lm Update: Create new dependency file
+Object file: Generated_Code/IO_Map_c.obj, format ELF/DWARF 2.0
+Object file: Generated_Code/Vectors_c.obj, format ELF/DWARF 2.0
+Option -Lm: Adding make info to 'Sources/Events_c.d'
+Global objects: 74, Data Size (RAM): 85
+Global objects: 4, Const Data Size (ROM): 48
+HC08 Compiler: *** 0 error(s), 0 warning(s), 0 information message(s) ***
+HC08 Compiler: *** Processing ok ***
+HC08 Compiler: *** 0 error(s), 0 warning(s), 0 information message(s) ***
+HC08 Compiler: *** Processing ok ***
+Object file: Sources/Events_c.obj, format ELF/DWARF 2.0
+Object file: Sources/main_c.obj, format ELF/DWARF 2.0
+Object file: Project_Settings/Startup_Code/start08_c.obj, format ELF/DWARF 2.0
+Code Size: 1
+Global objects: 1
+HC08 Compiler: *** 0 error(s), 0 warning(s), 0 information message(s) ***
+HC08 Compiler: *** Processing ok ***
+Object file: Generated_Code/Cpu_c.obj, format ELF/DWARF 2.0
+Code Size: 5
+Global objects: 2
+Code Size: 132
+HC08 Compiler: *** 0 error(s), 0 warning(s), 0 information message(s) ***
+HC08 Compiler: *** Processing ok ***
+Global objects: 6, Data Size (RAM): 6
+Code Size: 110
+Global objects: 23, Data Size (RAM): 2, Const Data Size (ROM): 2
+HC08 Compiler: *** 0 error(s), 0 warning(s), 0 information message(s) ***
+HC08 Compiler: *** Processing ok ***
+HC08 Compiler: *** 0 error(s), 0 warning(s), 0 information message(s) ***
+HC08 Compiler: *** Processing ok ***
+'Finished building: ../Sources/Events.c'
+'Finished building: ../Sources/main.c'
+'Finished building: ../Project_Settings/Startup_Code/start08.c'
+'Finished building: ../Generated_Code/Cpu.c'
+'Finished building: ../Generated_Code/IO_Map.c'
+'Finished building: ../Generated_Code/Vectors.c'
+' '
+' '
+' '
+' '
+' '
+' '
+'Building target: lab4-v3.abs'
+'Executing target #7 lab4-v3.abs'
+'Invoking: S08 Linker'
+"C:/Freescale/CW MCU v10.7/MCU/prog/linker" -ArgFile"lab4-v3.args" -O"lab4-v3.abs"
+E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Settings/Linker_Files/ProcessorExpert.prm
+Command Line: '-ArgFile"lab4-v3.args" -O"lab4-v3.abs"'
+Linking E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/Project_Settings/Linker_Files/ProcessorExpert.prm
+Reading file 'E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/FLASH/Sources/Events_c.obj'
+Reading file 'E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/FLASH/Sources/main_c.obj'
+Reading file 'E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/FLASH/Project_Settings/Startup_Code/start08_c.obj'
+Reading file 'E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/FLASH/Generated_Code/Cpu_c.obj'
+Reading file 'E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/FLASH/Generated_Code/IO_Map_c.obj'
+Reading file 'E:/Documentos/Universidad/2020-I/Microcontroladores/lab4/lab4-v3/FLASH/Generated_Code/Vectors_c.obj'
+Reading file 'C:/Freescale/CW MCU v10.7/MCU/lib/hc08c/lib/ansifs.lib'
+Generating Symbol table
+Generating DWARF data version 2.0
+Code Size: 289
+Generating MAP file 'E:\Documentos\Universidad\2020-I\Microcontroladores\lab4\lab4-v3\FLASH\lab4-v3.map'
+SmartLinker: *** 0 error(s), 0 warning(s), 0 information message(s) ***
+SmartLinker: *** Processing ok ***
+'Finished building target: lab4-v3.abs'
+' '
+'Executing target #8 lab4-v3.abs.s19'
+'Invoking: S08 Burner'
+"C:/Freescale/CW MCU v10.7/MCU/prog/burner" -ArgFile"lab4-v3.abs.args" -f="../Project_Settings/Linker_Files/burner.bbl" -env"ABS_FILE=lab4-v3.abs"
+'Finished building: lab4-v3.abs.s19'
+' '

@@ -1,0 +1,16 @@
+Los requerimientos para presentación del proyecto son las de un proyecto en general de una ingeniería, las cuales son:
+
+a) planeación: cronograma o diagrama Gantt
+b) recursos: materiales, costos, equipos y herramientas
+
+Ya con respecto al detalle de proyecto de microcontroladores debe tener:
+a) Diseño mecánico: si lo hay deben haber planos, simulaciones y descripción del funcionamiento siguiendo normatividad en el ámbito mecánico.
+b) Diseño electrónico: deben haber esquemas de los componentes interconectados, simulaciones, diseño de la PCB, descripción
+ y justificación de los componentes seleccionados, todo siguiendo la normatividad en el ámbito electrónico.
+c) Diseño de software: deben haber diagramas de flujo, explicaciones orales y simulaciones de los códigos implementados, 
+todo siguiendo la normatividad en el ambito de la ingeniería de software.
+
+Para la presentación se debe realizar una exposición oral de máximo 15 minutos, con todas las ayudas audiovisuales
+ que consideren necesarias: videos, audios, animaciones, diapositivas. No es necesario que todos los integrantes del
+ grupo esten presentes en la sustentación debido a que las preguntas que realizare al final las deben responder como
+ grupo y no individualmente. Recuerden que no es necesario la escritura de ningún documento en específico.
