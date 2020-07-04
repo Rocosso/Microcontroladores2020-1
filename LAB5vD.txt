@@ -1,0 +1,114 @@
+#include <hidef.h> /* for EnableInterrupts macro */
+#include <string.h>
+#include <stdio.h>
+//#include <stdlib.h>
+#include "derivative.h" /* include peripheral declarations */
+
+ //VARIABLE GLOBALES
+ 
+unsigned int Propia = 0;  //Variable almacena temperatura MCU en °c
+unsigned int Temperature_LM35 = 0;  //Variable almacena temperatura LM35 en °c
+unsigned int D1 = 0; //DIGITO 1 DE LA TEMP
+unsigned int D2 = 0; //DIGITO 2 DE LA TEMP 
+
+   ////////////////////////////////////
+   //////////FUNCIONES GLOBALES
+ 
+void Transmitir (unsigned char);   
+void LED (int);//Cambia el color de acuerdo a la medicion de temperatura		
+void delay(unsigned long);//retardo ,fclock 4Mhz x=12157
+unsigned char digitacion (int);// Divide la temperatura en digitos para ser enviada
+unsigned int conversionADC (); //recepcion del adc y lo transforma en centrigrados
+///////////////////////////////////////////////////////////
+
+void main(void) {
+
+//CONFIGURACION DEL ADC   Fminima=0.5 Mhz
+	ADCCFG = 0b10010000; // Configuracion  b7LOW POWER - b6,5divisorfrec reloj 8-b4LONG SAMPLE TIME - b3,2 10 BIT resolucion-b1,0 frecuenci modulo=frecbus
+	APCTL1 = 0b00001000; // Configuracion ADCP3 como pin ADC
+	ADCSC1 = 0b00100011; //  SE LE CONFIGURA EL CANAL 3 AL ADC
+//	_asm cli;
+////////////////////////
+//CONFIGURACION COMUNICACION SERIAL
+	SCIC2 = 0b00001000;
+	SCIBD = 30; //Serial communication
+////////////////////
+////COFIGURACIONES GENERALES DEL MICRO
+	SOPT1 = 0b01010011; //Turn off the wuao wuao 
+	PTADD = 0b00000111;
+	ICSC1 = 0b10000000;   //RELOJ EXTTERNO 4MHz
+////////////////////////////
+
+
+//	ADCSC2 = 0b00000000; // Configuracion???
+
+//	if(SRS_POR == 1){
+//		serial(10);
+//		serialchar("Last reset: Power On Reset (POR)");
+//		serial(10);
+//		serial(10);
+//	} else if(SRS_PIN == 1){
+//		serial(10);
+//		serialchar("Ultimo reset: External Reset Pin (PIN)");
+//		serial(10);
+//		serial(10);
+//	}
+	while(1){
+	
+unsigned int Temp=conversionADC ();			
+LED (Temp)   ;
+digitacion(Temp)	;
+Transmitir(D1);
+Transmitir(D2);				
+delay(12157);
+} 
+}
+
+////DECLARACION  FUCIONES GLOBALES/////////
+void LED (int temp){
+	if(temp<20){
+					PTAD = 0b00000000;  //PTAD=0000RGB
+				} else if(Temperature_LM35<23){
+					PTAD = 0b00000101;                 //MAGENTA
+				} else if(Temperature_LM35<26){
+					PTAD = 0b00000001;               //AZUL
+				} else if(Temperature_LM35<29){
+					PTAD = 0b00000011;              //CIAN
+				} else if(Temperature_LM35<32){
+					PTAD = 0b00000010;              //VERDE
+				} else if(Temperature_LM35<35){
+					PTAD = 0b00000110;               //AMARILLO
+				} else if(Temperature_LM35<38){
+					PTAD = 0b00000100;                    //ROJO
+				} else {
+					PTAD = 0b00000111;                  //BLANCO
+				}
+			
+}
+
+void delay (unsigned long x) {
+unsigned long i;
+for (i=0;i<x;i++);
+  
+}
+unsigned int conversionADC (){
+while(ADCSC1_COCO==0); //NO HAGA NADA HASTA QUE TERMINE LA CONVERCION
+Temperature_LM35 = ADCR*330/256;  //Convierte a Grados Centrigrados
+return Temperature_LM35;
+}
+unsigned char digitacion (int temp) {
+ 
+  D1=(temp%10)+48 ;
+  temp=temp/10;
+  D2=(temp%10)+48 ;
+  temp=0;
+}
+void Transmitir (unsigned char buffer) {
+  while(SCIS1_TDRE==0) ;
+  SCID=buffer;
+}
+
+////////////////////////////
+
+// hace falta cuadrar la com serial
+//simular

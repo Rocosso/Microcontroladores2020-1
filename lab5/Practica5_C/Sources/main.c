@@ -5,8 +5,8 @@
 #include "derivative.h" /* include peripheral declarations */
 
 
-unsigned int Propia = 0;  //Variable almacena temperatura MCU en °c
-unsigned int Temperature_LM35 = 0;  //Variable almacena temperatura LM35 en °c
+unsigned int Propia = 0;  //Variable almacena temperatura MCU en Â°c
+unsigned int Temperature_LM35 = 0;  //Variable almacena temperatura LM35 en Â°c
 unsigned int Temperature_ADCR = 0; //Variable almacena lectura cruda de ADC
 unsigned int Banderas = 0; //Bandera determina cuando hay nueva medicion disponible 1=Nueva
 unsigned int Lectura = 0; //Bandera determina cual medicion se reaiza 0=MCU 1=LM35 
@@ -53,22 +53,22 @@ void main(void) {
 				serialtext("Temperatura LM35: ",Temperature_LM35);  //Imprime Temperatura LM35
 				serial(10);  //Imprime Salto de linea
 				//Cambia el color de acuerdo a la medicion de temperatura
-				if(Temperature_LM35<23){
-					PTAD = 0;
+				if(Temperature_LM35<20){
+					PTAD = 0;  //PTAD=0000RGB
+				} else if(Temperature_LM35<23){
+					PTAD = 0b00000101;                 //MAGENTA
 				} else if(Temperature_LM35<26){
-					PTAD = 0b00000100;
+					PTAD = 0b00000001;               //AZUL
 				} else if(Temperature_LM35<29){
-					PTAD = 0b00000110;
+					PTAD = 0b00000110;              //CIAN
 				} else if(Temperature_LM35<32){
-					PTAD = 0b00000010;
+					PTAD = 0b00000110;              //VERDE
 				} else if(Temperature_LM35<35){
-					PTAD = 0b00000011;
+					PTAD = 0b00000110;               //AMARILLO
 				} else if(Temperature_LM35<38){
-					PTAD = 0b00000001;
-				} else if(Temperature_LM35<41){
-					PTAD = 0b00000101;
+					PTAD = 0b00000100;                    //ROJO
 				} else {
-					PTAD = 0b00000111;
+					PTAD = 0b00000111;                  //BLANCO
 				}
 				Lectura=0;
 				Banderas=0;
